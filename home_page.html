@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="CSS/stylesheet.css" rel="stylesheet" type="text/css">
+            <div align="center">
+                <header>
+                    <img src="upload_pic/logo.jpg">
+                    </img>
+                </header>
+            </div>
+            <title>
+                Home
+            </title>
+        </link>
+    </head>
+    <body style="background-color: #FFFFFF">
+        <!-- ************************** Buttons ************************** -->
+        <div align="center">
+            <a href="home_page.html">
+                <button class="button">
+                    <span>
+                        Home
+                    </span>
+                </button>
+            </a>
+            <a href="about_page.html">
+                <button class="button">
+                    <span>
+                        About Us
+                    </span>
+                </button>
+            </a>
+            <a href="service_page.html">
+                <button class="button">
+                    <span>
+                        Services
+                    </span>
+                </button>
+            </a>
+            <a href="portfolio_user.php">
+                <button class="button">
+                    <span>
+                        Portfolio
+                    </span>
+                </button>
+            </a>
+            <a href="project_page.html">
+                <button class="button">
+                    <span>
+                        Project
+                    </span>
+                </button>
+            </a>
+            <a href="contact_page.html">
+                <button class="button">
+                    <span>
+                        Contact
+                    </span>
+                </button>
+            </a>
+        </div>
+        <!-- ************************** Slideshow ************************** -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="111.jpg" style="width:100%">
+                    <div class="text">
+                        Design
+                    </div>
+                </img>
+            </div>
+            <div class="mySlides fade">
+                <img src="222.jpg" style="width:100%">
+                    <div class="text">
+                        Design
+                    </div>
+                </img>
+            </div>
+            <div class="mySlides fade">
+                <img src="333.jpg" style="width:100%">
+                    <div class="text">
+                        Design
+                    </div>
+                </img>
+            </div>
+        </div>
+        <br>
+            <div style="text-align:center">
+                <span class="dot">
+                </span>
+                <span class="dot">
+                </span>
+                <span class="dot">
+                </span>
+            </div>
+            <script>
+                var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+            </script>
+            <!-- ************************** Services detail ************************** -->
+            <div style="background-color:#5f2160; color:white;padding:20px; text-align: center;margin: 14px;">
+                <h2>
+                    <b>
+                        Services
+                    </b>
+                </h2>
+                <p>
+                    description
+                </p>
+                <p>
+                    description
+                </p>
+                <p>
+                    description
+                </p>
+                <p>
+                    description
+                </p>
+                <p>
+                    description
+                </p>
+            </div>
+            <!-- ************************** button for admin use ************************** -->
+            <div class="col-container">
+                <div class="col" style="background:#d2a7f2; width:850px;height:350px;">
+                    <h2>
+                        Description
+                    </h2>
+                    <p>
+                        description .....description ....
+                    </p>
+                    <p>
+                        description .....description ....
+                    </p>
+                    <p>
+                        description .....description ....
+                    </p>
+                    <p>
+                        description .....description ....
+                    </p>
+                </div>
+                <div class="col" style="background:#8f96d6; text-align: center">
+                    <div class="overlay" id="myNav">
+                        <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">
+                            ×
+                        </a>
+                        <div class="overlay-content">
+                            <form action="admin_page.php" method="post">
+                                <h1>
+                                    ADMIN LOGIN ONLY
+                                </h1>
+                                <b>
+                                    USER ID
+                                </b>
+                                <input id="u_id  " name="user_id" placeholder="User Id ..." type="text">
+                                    <br>
+                                        <br>
+                                            <b>
+                                                PASSWORD
+                                            </b>
+                                            <input id="password" name="password" placeholder="Password..." type="password">
+                                                <br>
+                                                    <br>
+                                                        <input class="btn_login_btn default" style="background-color: green" type="submit" value="LOGIN">
+                                                            <a class="closebtnn" href="javascript:void(0)" onclick="closeNav()">
+                                                                <input class="btn_login_btn default" style="background-color: red" type="button" value="CANCEL">
+                                                                </input>
+                                                            </a>
+                                                        </input>
+                                                    </br>
+                                                </br>
+                                            </input>
+                                        </br>
+                                    </br>
+                                </input>
+                            </form>
+                        </div>
+                    </div>
+                    <span onclick="openNav()" style="font-size:30px;cursor:pointer">
+                        <br>
+                            <br>
+                                <br>
+                                    <br>
+                                        <button class="btn_login_btn default">
+                                            ONLY FOR ADMIN
+                                        </button>
+                                    </br>
+                                </br>
+                            </br>
+                        </br>
+                    </span>
+                    <script>
+                        function openNav() {
+          document.getElementById("myNav").style.height = "100%";
+        }
+        function closeNav() {
+          document.getElementById("myNav").style.height = "0%";
+        }
+                    </script>
+                </div>
+            </div>
+            <div align="center">
+                <footer>
+                    Copyright © 2017 Nicdos Interior. All rights reserved.
+                </footer>
+            </div>
+        </br>
+    </body>
+</html>
